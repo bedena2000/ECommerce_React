@@ -63,8 +63,8 @@ export default function Header() {
             </Link>
           </div>
         </div>
-        <div onClick={handleMenu}>
-          <HiMenu size={32} className="cursor-pointer lg:hidden" />
+        <div onClick={handleMenu} className="lg:hidden">
+          <HiMenu size={32} className="cursor-pointer" />
         </div>
       </div>
       {/* {isSidemenuOpened && (
@@ -123,8 +123,8 @@ export default function Header() {
           </div>
         </div>
       )} */}
-      <AnimatePresence>
-        {isSidemenuOpened && (
+      {isSidemenuOpened && (
+        <AnimatePresence>
           <motion.div
             className="customContainer lg:hidden w-full"
             initial={{ height: 0, opacity: 0 }}
@@ -188,8 +188,8 @@ export default function Header() {
               </div>
             </div>
           </motion.div>
-        )}
-      </AnimatePresence>
+        </AnimatePresence>
+      )}
     </header>
   );
 }

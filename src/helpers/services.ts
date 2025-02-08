@@ -4,6 +4,7 @@ import api from "@/helpers/api";
 // Types
 import { Category } from "@/types/types";
 
+// Fetch all categories
 export const fetchAllCategories = async (): Promise<Category[]> => {
   try {
     const response = await api.get<Category[]>(`/products/categories`);
@@ -12,4 +13,9 @@ export const fetchAllCategories = async (): Promise<Category[]> => {
     console.error("Error fetching categories:", error);
     throw error;
   }
+};
+
+// Fetch signle category
+export const fetchSingleCategory = (slug: string) => {
+  return api.get(`/products/category/${slug}`);
 };
