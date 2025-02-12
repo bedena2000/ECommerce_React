@@ -47,7 +47,7 @@ export default function MainSlider() {
         } else {
           return prevIndex + 1;
         }
-      });
+    });
     }, 5000);
 
     return () => clearInterval(interval);
@@ -64,7 +64,7 @@ export default function MainSlider() {
   return (
     <div className="">
       <div className="customContainer">
-        <div className="flex gap-[45px] justify-stretch">
+        <div className="flex md:gap-[45px] flex-col md:flex-row justify-stretch">
           <div className="flex flex-col justify-between pt-10 pr-6 border-r border-black/20">
             {categories &&
               categories.length > 0 &&
