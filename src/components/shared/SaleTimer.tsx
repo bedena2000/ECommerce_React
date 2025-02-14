@@ -44,23 +44,23 @@ export default function SaleTimer({
   return (
     <div className="flex items-center gap-4">
       <div>
-        <p className="text-sm font-medium">Days</p>
-        <p className="text-3xl font-bold pr-[17px]">{computedDays}</p>
+        <p className=" lg:text-sm font-medium">Days</p>
+        <p className=" lg:text-3xl font-bold pr-[17px]">{computedDays}</p>
       </div>
       <p className="text-xl text-[#E07575] font-bold">:</p>
       <div>
-        <p className="text-sm font-medium">Hours</p>
-        <p className="text-3xl font-bold pr-[17px]">{computedHours}</p>
+        <p className=" lg:text-sm font-medium">Hours</p>
+        <p className=" lg:text-3xl font-bold pr-[17px]">{computedHours}</p>
       </div>
       <p className="text-xl text-[#E07575] font-bold">:</p>
       <div>
-        <p className="text-sm font-medium">Minutes</p>
-        <p className="text-3xl font-bold pr-[17px]">{computedMinutes}</p>
+        <p className=" lg:text-sm font-medium">Minutes</p>
+        <p className=" lg:text-3xl font-bold pr-[17px]">{computedMinutes}</p>
       </div>
       <p className="text-xl text-[#E07575] font-bold">:</p>
       <div>
-        <p className="text-sm font-medium">Seconds</p>
-        <p className="text-3xl font-bold pr-[17px]">{computedSeconds}</p>
+        <p className=" lg:text-sm font-medium">Seconds</p>
+        <p className=" lg:text-3xl font-bold pr-[17px]">{computedSeconds}</p>
       </div>
     </div>
   );

@@ -12,41 +12,41 @@ export interface CategoryData {
 }
 
 export interface Product {
-  availabilityStatus: string;
-  brand: string;
-  category: string;
-  description: string;
+  availabilityStatus: string | number;
+  brand: string | number;
+  category: string | number;
+  description: string | number;
   dimensions: {
-    width: number;
-    height: number;
-    depth: number;
+    width: number | string;
+    height: number | string;
+    depth: number | string;
   };
-  discountPercentage: number;
-  id: number;
+  discountPercentage: number | string;
+  id: number | string;
   images: string[];
   meta: {
-    barcode: string;
-    createdAt: string;
-    qrCode: string;
-    updatedAt: string;
+    barcode: string | number;
+    createdAt: string | number;
+    qrCode: string | number;
+    updatedAt: string | number;
   };
   minimumOrderQuantity: number;
-  price: number;
-  rating: number;
-  returnPolicy: string;
+  price: number | string;
+  rating: number | string;
+  returnPolicy: string | number;
   reviews: {
-    comment: string;
-    date: string;
-    rating: number;
-    reviewerEmail: string;
-    reviewerName: string;
+    comment: string | number;
+    date: string | number;
+    rating: number | string;
+    reviewerEmail: string | number;
+    reviewerName: string | number;
   }[];
-  shippingInformation: string;
-  sku: string;
-  stock: string;
+  shippingInformation: string | number;
+  sku: string | number;
+  stock: string | number;
   tags: string[];
-  thumbnail: string;
-  title: string;
-  warrantyInformation: string;
-  weight: number;
+  thumbnail: string | number;
+  title: string | number;
+  warrantyInformation: string | number;
+  weight: number | string;
 }

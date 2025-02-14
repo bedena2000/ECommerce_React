@@ -19,3 +19,9 @@ export const fetchAllCategories = async (): Promise<Category[]> => {
 export const fetchSingleCategory = (slug: string) => {
   return api.get(`/products/category/${slug}`);
 };
+
+// Fetch all products
+
+export const fetchAllProducts = () => {
+  return api.get('/products');
+};
