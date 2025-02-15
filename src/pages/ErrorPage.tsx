@@ -14,7 +14,7 @@ export default function ErrorPage() {
         <Link to="/">
           <Button
             title="Back to home page"
-            classNames="lg:mt-[80px] sm:mt-[40px] mt-[16px]  lg:px-[48px] lg:py-[16px] rounded-none text-black bg-[#DB4444]"
+            classNames="lg:mt-[80px] sm:mt-[40px] mt-[16px]  lg:px-[48px] lg:py-[16px] rounded-none text-black bg-[#DB4444] text-white"
           />
         </Link>
       </div>

@@ -3,7 +3,6 @@ import { Product as ProductInterface } from "@/types/types";
 
 // Slider
 import { Swiper, SwiperSlide } from "swiper/react";
-import { useSwiper } from "swiper/react";
 
 // Slider style
 import "swiper/css";
@@ -62,13 +61,13 @@ export default function ReusableSlider({ productList }: ReusableSliderProps) {
       >
         {productList &&
           productList.map((item: ProductInterface) => (
-            <SwiperSlide>
+            <SwiperSlide key={item.title}>
               <Product
+                id={item.id}
                 images={item.images}
                 price={item.price}
                 title={item.title}
                 discountPercentage={item.discountPercentage}
-                key={item.title}
               />
             </SwiperSlide>
           ))}
