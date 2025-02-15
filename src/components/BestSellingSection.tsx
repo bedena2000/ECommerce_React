@@ -11,7 +11,6 @@ export default function BestSellingSection() {
     0,
     4
   );
-  console.log(products);
 
   return (
     <div className="mt-20">

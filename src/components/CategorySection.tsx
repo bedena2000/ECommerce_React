@@ -116,11 +116,8 @@ export default function CategorySection() {
             >
               {listOfCategories.map((item) => {
                 return (
-                  <SwiperSlide>
-                    <Link
-                      to={`/category/${item.title.toLowerCase()}`}
-                      key={item.id}
-                    >
+                  <SwiperSlide key={item.id}>
+                    <Link to={`/category/${item.title.toLowerCase()}`}>
                       <div className="p-6 flex flex-col items-center justify-between gap-4 border border-gray-300 rounded-md">
                         <div>{item.icon}</div>
                         <div>
