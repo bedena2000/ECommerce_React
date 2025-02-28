@@ -16,14 +16,18 @@ import Product from "@/components/shared/Product";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import { MdOutlineKeyboardArrowLeft } from "react-icons/md";
 import { useState } from "react";
-import { Navigation } from "swiper/modules";
+import { Grid, Navigation } from "swiper/modules";
 
 interface ReusableSliderProps {
   productList: ProductInterface[];
+  rows?: number;
 }
 
-export default function ReusableSlider({ productList }: ReusableSliderProps) {
-  const [swiperInstance, setSwiperInstance] = useState<any>(null);
+export default function ReusableSlider({
+  productList,
+  rows,
+}: ReusableSliderProps) {
+  const [swiperInstance, setSwiperInstance] = useState<Swiper>(null);
 
   return (
     <div className="mt-24 lg:mt-10 relative">
@@ -43,9 +47,15 @@ export default function ReusableSlider({ productList }: ReusableSliderProps) {
       </div>
       <Swiper
         spaceBetween={50}
-        modules={[Navigation]}
+        modules={[Navigation, Grid]}
         onSwiper={(swiper) => {
           setSwiperInstance(swiper);
+        }}
+        slidesPerView={4}
+        slidesPerGroup={4}
+        grid={{
+          rows: rows,
+          fill: 'row',
         }}
         breakpoints={{
           640: {

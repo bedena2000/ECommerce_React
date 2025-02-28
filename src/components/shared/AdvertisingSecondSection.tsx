@@ -1,5 +1,3 @@
-import React from "react";
-
 // Images
 import JblImage from "@/assets/img/jbl_image.png";
 import SaleTimer from "@/components/shared/SaleTimer";
@@ -12,7 +10,9 @@ export default function AdvertisingSecondSection() {
       <div className="customContainer  bg-black">
         <div className="flex-col flex lg:flex-row items-center p-[37px] gap-[27px]">
           <div>
-            <p className="text-[#00FF66] text-xs lg:text-base font-medium">Categories</p>
+            <p className="text-[#00FF66] text-xs lg:text-base font-medium">
+              Categories
+            </p>
             <p className=" text-2xl lg:text-5xl text-white font-medium mt-8 ">
               Enhance Your Music Experience
             </p>

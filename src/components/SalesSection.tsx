@@ -42,7 +42,7 @@ export default function SalesSection() {
     <div className="mt-[140px]">
       <div className="customContainer">
         <CategoryTitle title="Today's" />
-        <div className="flex justify-between lg:justify-start items-center gap-[87px] mt-6">
+        <div className="hidden  sm:flex-col md:flex-row  sm:flex justify-between lg:justify-start items-center gap-[87px] mt-6">
           <p className="text-2xl lg:text-4xl font-medium">Flash Sales</p>
           <SaleTimer days={3} hours={23} minutes={19} seconds={56} />
         </div>

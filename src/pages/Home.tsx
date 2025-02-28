@@ -4,6 +4,8 @@ import CategorySection from "@/components/CategorySection";
 import MainSlider from "@/components/MainSlider";
 import SalesSection from "@/components/SalesSection";
 import AdvertisingSecondSection from "@/components/shared/AdvertisingSecondSection";
+import ExploreProduct from "@/components/shared/ExploreProduct";
+import NewArrival from '@/components/NewArrival.tsx';
 
 export default function Home() {
   return (
@@ -13,6 +15,8 @@ export default function Home() {
       <CategorySection />
       <BestSellingSection />
       <AdvertisingSecondSection />
+      <ExploreProduct />
+      <NewArrival />
     </div>
   );
 }
