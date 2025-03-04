@@ -47,16 +47,11 @@ export default function ReusableSlider({
       </div>
       <Swiper
         spaceBetween={50}
-        modules={[Navigation, Grid]}
+        modules={[Navigation]}
         onSwiper={(swiper) => {
           setSwiperInstance(swiper);
         }}
-        slidesPerView={4}
-        slidesPerGroup={4}
-        grid={{
-          rows: rows,
-          fill: 'row',
-        }}
+        slidesPerView={1}
         breakpoints={{
           640: {
             slidesPerView: 2,

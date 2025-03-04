@@ -50,7 +50,7 @@ function NewArrival() {
                 </div>
               </div>
 
-              <div className="flex flex-col sm:justify-between sm:items-center gap-7">
+              <div className="flex sm:flex-row flex-col sm:justify-between sm:items-center gap-7">
 
                 <div className="bg-black sm:basis-6/12 h-[300px] p-6 relative overflow-hidden">
                   <img src={speakersImage} alt="speakersImage" className="absolute right-8 bottom-0" />
