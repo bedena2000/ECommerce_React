@@ -6,6 +6,7 @@ import SalesSection from "@/components/SalesSection";
 import AdvertisingSecondSection from "@/components/shared/AdvertisingSecondSection";
 import ExploreProduct from "@/components/shared/ExploreProduct";
 import NewArrival from '@/components/NewArrival.tsx';
+import Delivery from '@/components/shared/Delivery.tsx';
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <AdvertisingSecondSection />
       <ExploreProduct />
       <NewArrival />
+      <Delivery />
     </div>
   );
 }
