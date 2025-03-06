@@ -4,6 +4,7 @@ import { Outlet } from "react-router";
 // Components
 import AdvertisingSection from "@/components/shared/AdvertisingSection";
 import Header from "@/components/shared/Header";
+import Footer from "@/components/shared/Footer";
 
 export default function MainLayout() {
   return (
@@ -13,6 +14,8 @@ export default function MainLayout() {
       <main>
         <Outlet />
       </main>
+        <Footer />
+
     </div>
   );
 }
