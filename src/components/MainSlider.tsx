@@ -80,20 +80,20 @@ export default function MainSlider() {
                 );
               })}
 
-            {(loading || error) &&
-              Array.from({ length: 9 }).map((_, index) => (
-                <ContentLoader
-                  speed={1}
-                  style={{
-                    width: "200px",
-                    height: "50px",
-                    marginTop: `${index > 0 ? "12px" : ""} `,
-                  }}
-                  key={Math.random()}
-                >
-                  <rect rx="3" width="200" height="20" />
-                </ContentLoader>
-              ))}
+            {/*{(loading || error) &&*/}
+            {/*  Array.from({ length: 9 }).map((_, index) => (*/}
+            {/*    <ContentLoader*/}
+            {/*      speed={1}*/}
+            {/*      style={{*/}
+            {/*        width: "200px",*/}
+            {/*        height: "50px",*/}
+            {/*        marginTop: `${index > 0 ? "12px" : ""} `,*/}
+            {/*      }}*/}
+            {/*      key={Math.random()}*/}
+            {/*    >*/}
+            {/*      <rect rx="3" width="200" height="20" />*/}
+            {/*    </ContentLoader>*/}
+            {/*  ))}*/}
           </div>
 
           {categoryData && categoryData.length > 0 && (
@@ -138,18 +138,18 @@ export default function MainSlider() {
             </div>
           )}
 
-          {loading && (
-            <ContentLoader
-              speed={0.8}
-              viewBox="0 0 476 560"
-              style={{
-                width: "100%",
-                height: "760px",
-              }}
-            >
-              <rect x="15" y="46" rx="20" ry="20" width="393" height="349" />
-            </ContentLoader>
-          )}
+          {/*{loading && (*/}
+          {/*  <ContentLoader*/}
+          {/*    speed={0.8}*/}
+          {/*    viewBox="0 0 476 560"*/}
+          {/*    style={{*/}
+          {/*      width: "100%",*/}
+          {/*      height: "760px",*/}
+          {/*    }}*/}
+          {/*  >*/}
+          {/*    <rect x="15" y="46" rx="20" ry="20" width="393" height="349" />*/}
+          {/*  </ContentLoader>*/}
+          {/*)}*/}
         </div>
       </div>
     </div>
