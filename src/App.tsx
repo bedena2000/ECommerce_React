@@ -12,6 +12,7 @@ import ErrorPage from "@/pages/ErrorPage";
 import MainLayout from "@/layout/MainLayout";
 import SignUp from "@/pages/SignUp";
 import Contact from "@/pages/Contact";
+import About from "@/pages/About";
 
 // Helpers
 import { PAGE_ROUTES } from "@/helpers/PagesList";
@@ -42,6 +43,7 @@ export default function App() {
           <Route path={PAGE_ROUTES.DASHBOARD} element={<Dashboard />} />
           <Route path={PAGE_ROUTES.SIGN_UP} element={<SignUp />} />
           <Route path={PAGE_ROUTES.CONTACT} element={<Contact />} />
+          <Route path={PAGE_ROUTES.ABOUT} element={<About />} />
           <Route path={PAGE_ROUTES.ERROR} element={<ErrorPage />} />
         </Route>
       </Routes>
