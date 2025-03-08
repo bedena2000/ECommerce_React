@@ -55,7 +55,7 @@ export default function Header() {
             <IoSearchOutline size={24} className="cursor-pointer" />
           </div>
           <div className="flex items-center gap-[22px]">
-            <Link to="/liked">
+            <Link to="/wishlist">
               <CiHeart size={24} className="cursor-pointer" />
             </Link>
             <Link to="/cart">
