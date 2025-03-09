@@ -14,6 +14,7 @@ import SignUp from "@/pages/SignUp";
 import Contact from "@/pages/Contact";
 import About from "@/pages/About";
 import Wishlist from "@/pages/Wishlist";
+import Cart from "@/pages/Cart";
 
 // Helpers
 import { PAGE_ROUTES } from "@/helpers/PagesList";
@@ -46,6 +47,7 @@ export default function App() {
           <Route path={PAGE_ROUTES.CONTACT} element={<Contact />} />
           <Route path={PAGE_ROUTES.ABOUT} element={<About />} />
           <Route path={PAGE_ROUTES.WISHLIST} element={<Wishlist />} />
+          <Route path={PAGE_ROUTES.CART} element={<Cart />} />
           <Route path={PAGE_ROUTES.ERROR} element={<ErrorPage />} />
         </Route>
       </Routes>

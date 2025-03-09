@@ -5,5 +5,6 @@ export const PAGE_ROUTES = {
   CONTACT: "/contact",
   ABOUT: "/about",
   WISHLIST: "/wishlist",
+  CART: "/cart",
   ERROR: "*",
 };

@@ -19,7 +19,7 @@ export default function Wishlist() {
     const wishlistProducts = useSelector((state: RootState) => state.wishlist);
     const dispatch = useDispatch();
 
-    console.log(wishlistProducts);
+
 
     return (
         <div className="mt-20 mb-20">
@@ -36,7 +36,7 @@ export default function Wishlist() {
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mt-14 gap-8">
                         {
-                            wishlistProducts.map((product: Product) => <WishlistProduct product={product} />)
+                            wishlistProducts.map((product: Product) => <WishlistProduct key={product.id} product={product} />)
                         }
                     </div>
 

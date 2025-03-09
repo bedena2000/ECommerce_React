@@ -51,6 +51,11 @@ export interface Product {
   weight: number | string;
 }
 
+export interface cartProduct {
+  product: Product;
+  quantity: number;
+}
+
 
 // // Review interface
 // interface Review {
