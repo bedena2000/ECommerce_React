@@ -6,5 +6,6 @@ export const PAGE_ROUTES = {
   ABOUT: "/about",
   WISHLIST: "/wishlist",
   CART: "/cart",
+  DETAILS: "/details",
   ERROR: "*",
 };

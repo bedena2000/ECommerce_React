@@ -9,7 +9,7 @@ export const fetchSingleProduct = (productId: number) => {
   try {
     return api.get(`/products/${productId}`);
   } catch (error) {
-    console.log("Eerror fetching product", error);
+    console.log("Error fetching product", error);
     throw error;
   }
 };

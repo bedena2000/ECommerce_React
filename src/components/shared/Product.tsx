@@ -10,6 +10,7 @@ import { fetchSingleProduct } from "@/helpers/services";
 
 // Store
 import { addToWishlist } from "@/store/wishlistReducer.ts";
+import { addToDetails } from "@/store/detailsReducer.ts";
 import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "@/store/store.ts";
 
@@ -49,8 +50,12 @@ const Product = ({
     event.preventDefault();
   }
 
+  const handleDetails = () => {
+      dispatch(addToDetails(+id));
+  };
+
   return (
-    <Link to={`/product/${id}`} className="relative z-10">
+    <Link to={`/details`} onClick={handleDetails} className="relative z-10">
       <div className="cursor-pointer">
         {/* top part */}
         <div className="bg-[#F5F5F5] p-3 relative h-[250px]">
