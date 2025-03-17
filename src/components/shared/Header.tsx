@@ -33,6 +33,7 @@ export default function Header() {
   };
 
   const handleSearchClick = () => {
+    dispatch(changeSearchTerm(searchTerm));
     navigate("/products");
   };
 
@@ -206,13 +207,22 @@ export default function Header() {
                   </div>
                 </div>
                 <div className="flex items-center gap-2 flex-wrap mt-5">
-                  <div className="flex items-center gap-2 bg-[#F5F5F5] px-[12px] py-[12px] rounded-md w-full justify-between">
+                  <div
+                    className="flex items-center gap-2 bg-[#F5F5F5] px-[12px] py-[12px] rounded-md w-full justify-between"
+                    onKeyDown={handleSearch}
+                  >
                     <input
                       type="text"
                       placeholder="What are you looking for?"
-                      className="bg-transparent outline-none text-[#7D8184]"
+                      className="bg-transparent outline-none text-[#7D8184] w-full"
+                      value={searchTerm}
+                      onChange={(event) => setSearchTerm(event.target.value)}
                     />
-                    <IoSearchOutline size={24} className="cursor-pointer" />
+                    <IoSearchOutline
+                      onClick={handleSearchClick}
+                      size={24}
+                      className="cursor-pointer"
+                    />
                   </div>
                 </div>
               </div>
