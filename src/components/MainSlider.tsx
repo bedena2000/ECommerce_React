@@ -8,6 +8,10 @@ import { Category, CategoryData } from "@/types/types";
 // Skeleton Element
 import ContentLoader from "react-content-loader";
 
+// Store
+import { useDispatch } from "react-redux";
+import { changeCategory } from "@/store/searchOptionReducer";
+
 export default function MainSlider() {
   const [categories, setCategories] = useState<Category[]>([]);
   const [error, setError] = useState<string | null>(null);
@@ -15,6 +19,8 @@ export default function MainSlider() {
   const [categoryData, setCategorydata] = useState<CategoryData[]>([]);
   const [numberOfSlides, setNumberOfSlider] = useState(0);
   const [currentSliderIndex, setCurrentSliderIndex] = useState(0);
+
+  const dispatch = useDispatch();
 
   useEffect(() => {
     const getCategories = async () => {
@@ -47,7 +53,7 @@ export default function MainSlider() {
         } else {
           return prevIndex + 1;
         }
-    });
+      });
     }, 5000);
 
     return () => clearInterval(interval);
@@ -61,6 +67,12 @@ export default function MainSlider() {
     setCurrentSliderIndex(elementIndex);
   };
 
+  const handleCategoryClick = (category: Category) => {
+    const selectedCategory = category.slug;
+
+    dispatch(changeCategory(selectedCategory));
+  };
+
   return (
     <div className="">
       <div className="customContainer">
@@ -72,8 +84,9 @@ export default function MainSlider() {
                 return (
                   <Link
                     className="hover:px-2 transition-all ease-in delay-50 duration-100 hover:bg-slate-300 cursor-pointer"
-                    to={`/search?category=${category.slug}`}
+                    to={`/products`}
                     key={category.slug}
+                    onClick={() => handleCategoryClick(category)}
                   >
                     {category.name}
                   </Link>

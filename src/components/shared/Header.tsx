@@ -10,10 +10,31 @@ import { CiShoppingCart } from "react-icons/ci";
 import { HiMenu } from "react-icons/hi";
 import { useState } from "react";
 
+// Store
+import { useDispatch } from "react-redux";
+import { changeSearchTerm } from "@/store/searchOptionReducer";
+
+// Router
+import { useNavigate } from "react-router";
+
 export default function Header() {
   const [isSidemenuOpened, setSideMenu] = useState(false);
+  const [searchTerm, setSearchTerm] = useState("");
 
   const handleMenu = () => setSideMenu(!isSidemenuOpened);
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  const handleSearch = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    if (event.key === "Enter") {
+      dispatch(changeSearchTerm(searchTerm));
+      navigate("/products");
+    }
+  };
+
+  const handleSearchClick = () => {
+    navigate("/products");
+  };
 
   return (
     <header className="pt-[40px] pb-[15px] border-b border-black/20">
@@ -46,13 +67,22 @@ export default function Header() {
           </Link>
         </div>
         <div className="hidden lg:flex items-center gap-2">
-          <div className="flex items-center gap-2 bg-[#F5F5F5] px-[12px] py-[12px] rounded-md mr-[24px]">
+          <div
+            className="flex items-center gap-2 bg-[#F5F5F5] px-[12px] py-[12px] rounded-md mr-[24px]"
+            onKeyDown={handleSearch}
+          >
             <input
               type="text"
               placeholder="What are you looking for?"
               className="bg-transparent outline-none text-[#7D8184]"
+              value={searchTerm}
+              onChange={(event) => setSearchTerm(event.target.value)}
             />
-            <IoSearchOutline size={24} className="cursor-pointer" />
+            <IoSearchOutline
+              onClick={handleSearchClick}
+              size={24}
+              className="cursor-pointer"
+            />
           </div>
           <div className="flex items-center gap-[22px]">
             <Link to="/wishlist">

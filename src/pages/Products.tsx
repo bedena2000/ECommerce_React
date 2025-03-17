@@ -105,7 +105,7 @@ export default function Products() {
   return (
     <div className="mt-[60px] mb-[60px]">
       <div className="customContainer">
-        <div className="flex p-4 gap-6">
+        <div className="flex flex-col md:flex-row p-4 gap-6">
           {/* Menu */}
           <div className="p-4 border rounded-md">
             <div className="border-b pb-6">
@@ -132,6 +132,7 @@ export default function Products() {
               <select
                 onChange={handleCategoryChange}
                 className="w-full p-2 cursor-pointer uppercase border border-gray-200 outline-none"
+                value={searchOptions.category}
               >
                 <option value="">Select category</option>
                 {categoryList &&
@@ -150,7 +151,7 @@ export default function Products() {
 
           {/* Search + Content */}
           <div className="flex flex-col justify-between">
-            <div className="grid grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
               {productList &&
                 productList
                   .slice(sliceFirstPart, sliceSecondPart)
