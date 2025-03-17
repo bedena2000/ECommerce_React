@@ -56,6 +56,10 @@ export interface cartProduct {
   quantity: number;
 }
 
+export interface searchOptionInterface {
+  searchTerm: string;
+  category: string;
+}
 
 // // Review interface
 // interface Review {

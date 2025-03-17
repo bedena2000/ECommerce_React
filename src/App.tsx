@@ -16,6 +16,7 @@ import About from "@/pages/About";
 import Wishlist from "@/pages/Wishlist";
 import Cart from "@/pages/Cart";
 import Details from "@/pages/Details";
+import Products from "@/pages/Products";
 
 // Helpers
 import { PAGE_ROUTES } from "@/helpers/PagesList";
@@ -50,6 +51,7 @@ export default function App() {
           <Route path={PAGE_ROUTES.WISHLIST} element={<Wishlist />} />
           <Route path={PAGE_ROUTES.CART} element={<Cart />} />
           <Route path={PAGE_ROUTES.DETAILS} element={<Details />} />
+          <Route path={PAGE_ROUTES.PRODUCTS} element={<Products />} />
           <Route path={PAGE_ROUTES.ERROR} element={<ErrorPage />} />
         </Route>
       </Routes>
