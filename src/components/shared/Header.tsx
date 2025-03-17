@@ -40,7 +40,9 @@ export default function Header() {
   return (
     <header className="pt-[40px] pb-[15px] border-b border-black/20">
       <div className="customContainer flex items-center justify-between">
-        <div className="text-lg font-bold">Exclusive</div>
+        <Link to="/">
+          <div className="text-lg font-bold">ECommerce</div>
+        </Link>
         <div className="hidden lg:flex items-center gap-[48px]">
           <Link
             className="text-sm font-normal transition-all ease-in delay-100 hover:pb-1 hover:border-b hover:border-black/40"

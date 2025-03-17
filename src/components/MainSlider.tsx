@@ -12,6 +12,9 @@ import ContentLoader from "react-content-loader";
 import { useDispatch } from "react-redux";
 import { changeCategory } from "@/store/searchOptionReducer";
 
+// Router
+import { useNavigate } from "react-router";
+
 export default function MainSlider() {
   const [categories, setCategories] = useState<Category[]>([]);
   const [error, setError] = useState<string | null>(null);
@@ -21,6 +24,7 @@ export default function MainSlider() {
   const [currentSliderIndex, setCurrentSliderIndex] = useState(0);
 
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const getCategories = async () => {
@@ -37,6 +41,7 @@ export default function MainSlider() {
           responses.map((response) => response.data)[0].products.length
         );
       } catch (err) {
+        navigate("/404");
         setError("Failed to fetch categories");
         console.error("Error fetching categories:", err);
       } finally {
@@ -124,9 +129,9 @@ export default function MainSlider() {
                 {categoryData[1].products.map((product) => (
                   <img
                     className="object-contain w-full h-full"
-                    src={product.thumbnail}
+                    src={product.thumbnail.toString()}
                     alt="image"
-                    key={product.thumbnail}
+                    key={product.thumbnail.toString()}
                   />
                 ))}
               </div>

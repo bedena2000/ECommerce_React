@@ -4,6 +4,9 @@ import { Product as ProductInterface } from "@/types/types";
 // Slider
 import { Swiper, SwiperSlide } from "swiper/react";
 
+// Animation
+import { motion } from "framer-motion";
+
 // Slider style
 import "swiper/css";
 import "swiper/css/navigation";
@@ -12,7 +15,6 @@ import "swiper/css/scrollbar";
 import Product from "@/components/shared/Product";
 
 // Icons
-
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 import { MdOutlineKeyboardArrowLeft } from "react-icons/md";
 import { useState } from "react";
@@ -30,7 +32,13 @@ export default function ReusableSlider({
   const [swiperInstance, setSwiperInstance] = useState<Swiper>(null);
 
   return (
-    <div className="mt-24 lg:mt-10 relative">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.5 }}
+      className="mt-24 lg:mt-10 relative"
+    >
       <div className="flex items-center gap-2 absolute -top-16 left-0 lg:right-0 z-10 lg:left-auto">
         <div
           className="p-3 rounded-full bg-[#F5F5F5] transition-all ease-in duration-400 hover:bg-slate-200 inline-block cursor-pointer"
@@ -77,6 +85,6 @@ export default function ReusableSlider({
             </SwiperSlide>
           ))}
       </Swiper>
-    </div>
+    </motion.div>
   );
 }

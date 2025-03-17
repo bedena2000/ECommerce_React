@@ -10,6 +10,9 @@ import { useSelector } from "react-redux";
 import Button from "@/components/shared/Button";
 import { Link } from "react-router";
 
+// Animate
+import { AnimatePresence, motion } from "framer-motion";
+
 export default function SalesSection() {
   const products = useSelector((state: RootState) => state.products);
   const [productFinalList, setProductFinalList] = useState<Product[]>([]);
@@ -39,7 +42,11 @@ export default function SalesSection() {
   }, [products]);
 
   return (
-    <div className="mt-[140px]">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+      className="mt-[140px]">
       <div className="customContainer">
         <CategoryTitle title="Today's" />
         <div className="hidden  sm:flex-col md:flex-row  sm:flex justify-between lg:justify-start items-center gap-[87px] mt-6">
@@ -56,6 +63,6 @@ export default function SalesSection() {
           /></Link>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

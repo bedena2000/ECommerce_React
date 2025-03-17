@@ -1,5 +1,5 @@
 // Routing
-import { Routes, Route } from "react-router";
+import { Routes, Route, useNavigate } from "react-router";
 
 // Store
 import { useDispatch } from "react-redux";
@@ -25,6 +25,7 @@ import { fetchAllProducts } from "@/helpers/services";
 
 export default function App() {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const getAllProducts = async () => {
@@ -32,6 +33,7 @@ export default function App() {
         const products = await fetchAllProducts();
         dispatch(fillWithProducts(products.data.products));
       } catch {
+        navigate("/404");
         console.log("there is error fetching data");
       }
     };

@@ -26,8 +26,14 @@ import "swiper/css/scrollbar";
 import { Navigation } from "swiper/modules";
 import { Link } from "react-router";
 
+// Store
+import { useDispatch } from "react-redux";
+import { changeCategory } from "@/store/searchOptionReducer";
+
 export default function CategorySection() {
   const [swiperInstance, setSwiperInstance] = useState<any>(null);
+
+  const dispatch = useDispatch();
 
   const listOfCategories = [
     {
@@ -71,6 +77,16 @@ export default function CategorySection() {
       icon: <GiSonicShoes size={32} />,
     },
   ];
+
+  const handleCategory = (item: {
+    id: number;
+    title: string;
+    icon: SVGElement;
+  }) => {
+    const category = item.title.toLowerCase();
+
+    dispatch(changeCategory(category));
+  };
 
   return (
     <div className="mt-[80px]">
@@ -117,7 +133,7 @@ export default function CategorySection() {
               {listOfCategories.map((item) => {
                 return (
                   <SwiperSlide key={item.id}>
-                    <Link to={`/category/${item.title.toLowerCase()}`}>
+                    <Link to={`/products`} onClick={() => handleCategory(item)}>
                       <div className="p-6 flex flex-col items-center justify-between gap-4 border border-gray-300 rounded-md">
                         <div>{item.icon}</div>
                         <div>

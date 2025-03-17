@@ -33,10 +33,10 @@ export const fetchSingleCategory = (slug: string) => {
 // Fetch all products
 
 export const fetchAllProducts = () => {
-  return api.get('/products?limit=200');
+  return api.get("/products?limit=200");
 };
 
 // Fetch categories list
 export const fetchCategoryList = () => {
-  return api.get('/products/category-list');
+  return api.get("/products/category-list");
 };
