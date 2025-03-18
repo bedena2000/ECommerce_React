@@ -3,7 +3,7 @@ ECommerce website using React
 ![Website](https://github.com/bedena2000/ECommerce_React/blob/master/public/website_screenshot.png)
 
 Live DEMO:
-[https://eccomercetestreact.netlify.app/](DEMO WEBSITE)
+[DEMO WEBSITE](https://eccomercetestreact.netlify.app/)
 
 
 
