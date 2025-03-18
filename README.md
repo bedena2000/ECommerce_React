@@ -1,6 +1,6 @@
 ECommerce website using React
 
-![https://github.com/bedena2000/ECommerce_React/blob/master/public/website_screenshot.png]
+![Website](https://github.com/bedena2000/ECommerce_React/blob/master/public/website_screenshot.png)
 
 Live DEMO:
 [https://eccomercetestreact.netlify.app/](DEMO WEBSITE)
