@@ -1,6 +1,6 @@
 ECommerce website using React
 
-["C:\Users\test\Desktop\All\Programing\Portfolio_Projects\ECommerce_React\public\website_screenshot.png"]
+[https://github.com/bedena2000/ECommerce_React/blob/master/public/website_screenshot.png]
 
 Live DEMO:
 [https://eccomercetestreact.netlify.app/](DEMO WEBSITE)
